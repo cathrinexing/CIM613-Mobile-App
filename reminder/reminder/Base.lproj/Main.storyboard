@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="reminder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKb-8v-L0r">
+                                <rect key="frame" x="135.66666666666666" y="84" width="104" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbm-2N-cPd">
+                                <rect key="frame" x="163" y="440" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Krb-BE-wqW"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1ci-pd-21h">
+                                <rect key="frame" x="27" y="170" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="543178177.86480498">
+                                    <!--2018-03-19 18:49:37 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-441810000">
+                                    <!--1987-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="en_US_POSIX"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcz-GQ-jPf">
+                                <rect key="frame" x="20" y="490" width="335" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A2R-2E-pcx">
+                                <rect key="frame" x="40" y="391" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A2R-2E-pcx" secondAttribute="trailing" constant="20" id="DaH-XN-S0k"/>
+                            <constraint firstItem="mcz-GQ-jPf" firstAttribute="top" secondItem="mbm-2N-cPd" secondAttribute="bottom" constant="20" id="GIc-qU-urm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mcz-GQ-jPf" secondAttribute="trailing" constant="20" id="LIj-el-Zm1"/>
+                            <constraint firstItem="1ci-pd-21h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OnL-of-Phm"/>
+                            <constraint firstItem="A2R-2E-pcx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RQl-Qa-x6W"/>
+                            <constraint firstItem="mbm-2N-cPd" firstAttribute="top" secondItem="A2R-2E-pcx" secondAttribute="bottom" constant="40" id="T8D-Ho-Ig6"/>
+                            <constraint firstItem="A2R-2E-pcx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="V1Y-gb-cDE"/>
+                            <constraint firstItem="1ci-pd-21h" firstAttribute="top" secondItem="VKb-8v-L0r" secondAttribute="bottom" constant="20" id="ckz-ck-gBO"/>
+                            <constraint firstItem="mbm-2N-cPd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hgX-cF-Mi2"/>
+                            <constraint firstItem="VKb-8v-L0r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="nqs-15-JLD"/>
+                            <constraint firstItem="mcz-GQ-jPf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o2v-lG-VNv"/>
+                            <constraint firstItem="A2R-2E-pcx" firstAttribute="top" secondItem="1ci-pd-21h" secondAttribute="bottom" constant="20" id="wSp-GG-Zym"/>
+                            <constraint firstItem="VKb-8v-L0r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yW1-wV-imC"/>
+                            <constraint firstItem="mcz-GQ-jPf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="z7V-sz-7OI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="Label" destination="mcz-GQ-jPf" id="B36-3v-bBV"/>
+                        <outlet property="Picker" destination="1ci-pd-21h" id="Jsr-lp-ZWo"/>
+                        <outlet property="inputtxt" destination="A2R-2E-pcx" id="c9J-WF-bjP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
